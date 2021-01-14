@@ -1,0 +1,17 @@
+
+# pas de fichier .o
+*.o
+
+# ignorer uniquement le fichier TODO à la racine du projet
+/TODO
+
+# ignorer tous les fichiers dans le répertoire build
+build_all/
+dev_w64/
+picsimlab_win64/
+
+# ignorer doc/notes.txt, mais pas doc/server/arch.txt
+#doc/*.txt
+
+# ignorer tous les fichiers .txt sous le répertoire doc/
+#doc/**/*.txt
