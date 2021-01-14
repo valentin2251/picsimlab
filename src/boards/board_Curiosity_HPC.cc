@@ -172,7 +172,7 @@ cboard_Curiosity_HPC::cboard_Curiosity_HPC(void)
  label1 = new CLabel ();
  label1->SetFOwner (&Window1);
  label1->SetName (lxT ("label1_p8"));
- label1->SetX (13;
+ label1->SetX (13);
  label1->SetY (200 - 120);
  label1->SetWidth (80);
  label1->SetHeight (20);
