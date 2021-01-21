@@ -169,6 +169,33 @@ cboard_Curiosity_HPC::cboard_Curiosity_HPC(void)
  gauge4->SetValue (0);
  gauge4->SetType (4);
  Window1.CreateChild (gauge4);
+  //gauge5
+ gauge5 = new CGauge ();
+ gauge5->SetFOwner (&Window1);
+ gauge5->SetName (lxT ("gauge5_p8"));
+ gauge5->SetX (78);
+ gauge5->SetY (205 - 130);
+ gauge5->SetWidth (80);
+ gauge5->SetHeight (20);
+ gauge5->SetEnable (1);
+ gauge5->SetVisible (1);
+ gauge5->SetRange (100);
+ gauge5->SetValue (0);
+ gauge5->SetType (4);
+ Window1.CreateChild (gauge5);
+ //label1
+ label1 = new CLabel ();
+ label1->SetFOwner (&Window1);
+ label1->SetName (lxT ("label1_p8"));
+ label1->SetX (13);
+ label1->SetY (200 - 120);
+ label1->SetWidth (80);
+ label1->SetHeight (20);
+ label1->SetEnable (1);
+ label1->SetVisible (1);
+ label1->SetText (lxT ("RA0/AN0"));
+ label1->SetAlign (1);
+ Window1.CreateChild (label1);
  //label2
  label2 = new CLabel ();
  label2->SetFOwner (&Window1);
@@ -268,11 +295,11 @@ cboard_Curiosity_HPC::cboard_Curiosity_HPC(void)
  combo2->SetEnable (1);
  combo2->SetVisible (1);
 #ifndef _WIN_   
- combo1->SetText (lxT ("/dev/tnt0"));  
- combo2->SetText (lxT ("/dev/tnt1"));
+ combo1->SetText (lxT ("/dev/tnt2"));  
+ combo2->SetText (lxT ("/dev/tnt3"));
 #else    
  combo1->SetText (lxT ("COM1"));
- combo2->SetText (lxT ("COM2"));
+ combo2->SetText (lxT ("COM3"));
 #endif  
  char * resp = serial_port_list ();
  if (resp)
@@ -295,6 +322,8 @@ cboard_Curiosity_HPC::~cboard_Curiosity_HPC(void)
  Window1.DestroyChild (gauge2);
  Window1.DestroyChild (gauge3);
  Window1.DestroyChild (gauge4);
+ Window1.DestroyChild (gauge5);
+ Window1.DestroyChild (label1);
  Window1.DestroyChild (label2);
  Window1.DestroyChild (label3);
  Window1.DestroyChild (label4);
@@ -688,7 +717,7 @@ cboard_Curiosity_HPC::Draw(CDraw *draw, double scale)
        draw->Canvas.SetColor (100, 100, 100);
        break;
       case O_POT1:
-       draw->Canvas.SetColor (66, 109, 246);
+       draw->Canvas.SetColor (218, 219, 213);
        break;
       }
 
@@ -724,6 +753,9 @@ cboard_Curiosity_HPC::Draw(CDraw *draw, double scale)
 
        draw->Canvas.SetColor (250, 250, 250);
        draw->Canvas.Circle (1, output[i].cx, output[i].cy, 15);
+
+       draw->Canvas.SetColor (0, 0, 0);
+       draw->Canvas.Rectangle (1, 225, 414, 5, 7);
 
        draw->Canvas.SetColor (150, 150, 150);
        int x = -10 * sin ((5.585 * (pot1 / 200.0)) + 0.349);
@@ -771,6 +803,8 @@ cboard_Curiosity_HPC::Draw(CDraw *draw, double scale)
  gauge3->SetValue (0.4444 * (pic.pins[9].oavalue - 30));
  //RA7 mean value to gauge4
  gauge4->SetValue (0.4444 * (pic.pins[8].oavalue - 30));
+ //potar value
+ gauge5->SetValue (pot1 * 0.5);
 
 
 }

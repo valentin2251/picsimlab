@@ -47,6 +47,8 @@ class cboard_Curiosity_HPC:public bsim_picsim
         CGauge *gauge2;   //gauge to show mean value of RA5
         CGauge *gauge3;   //gauge to show mean value of RA6
         CGauge *gauge4;   //gauge to show mean value of RA7
+        CGauge *gauge5;   //gauge to show mean value of RA7
+        CLabel *label1;   //label of gauge RA4
         CLabel *label2;   //label of gauge RA4
         CLabel *label3;   //label of gauge RA5
         CLabel *label4;   //label of gauge RA6
