@@ -2,6 +2,7 @@ include ../VERSION
 
 OBJS = ppicsimlab.o picsimlab1.o picsimlab2.o picsimlab3.o picsimlab4.o picsimlab5.o serial_port.o\
  boards/board.o boards/boards_defs.o boards/bsim_picsim.o boards/bsim_simavr.o \
+ boards/board_Curiosity_HPC.o \
  devices/lcd_hd44780.o devices/mi2c_24CXXX.o devices/rtc_ds1307.o devices/rtc_pfc8563.o devices/lcd_pcf8833.o\
  devices/lcd_pcd8544.o devices/mplabxd.o devices/ldd_max72xx.o devices/io_74xx595.o devices/io_PCF8574.o\
  devices/io_MCP23X17.o devices/rcontrol.o devices/tsc_xpt2046.cc \
@@ -18,8 +19,6 @@ OBJS = ppicsimlab.o picsimlab1.o picsimlab2.o picsimlab3.o picsimlab4.o picsimla
  parts/part_gamepad_an.o devices/vterm.o parts/part_vterm.o  parts/part_pot_r.o
  
 
-OBJS_EXP =  boards/board_Curiosity_HPC.o
- 
 
 .DEFAULT_GOAL := all
 
