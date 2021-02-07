@@ -9,6 +9,8 @@
 build_all/
 dev_w64/
 picsimlab_win64/
+dev_w32/
+picsimlab_win32/
 
 # ignorer doc/notes.txt, mais pas doc/server/arch.txt
 #doc/*.txt

@@ -7,11 +7,15 @@ This version of PICSimLab is an ENSICAEN project based on PICSimLab realtime emu
 
 ## Use of PICSimLab
 
-For Windows 64 bits :
+For Windows 64 bits :  
 Download the archive picsimlab_0.1_w64-dev.zip with the following link : https://github.com/valentin2251/picsimlab/releases/download/picsimlab_ENSI_0.1/picsimlab_0.1_w64-dev.zip. 
 Unzip and run picsimlab.exe
 
-For Ubuntu 20.04 : 
+For Windows 32 bits :  
+Download the archive picsimlab_0.1_w32-dev.zip with the following link : https://github.com/valentin2251/picsimlab/releases/download/picsimlab_ENSI_0.1/picsimlab_0.1_w32-dev.zip. 
+Unzip and run picsimlab.exe
+
+For Ubuntu 20.04 :  
 sudo ./picsimlab_build_all_and_deps.sh
 
 ## Last version update
