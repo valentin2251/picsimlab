@@ -12,7 +12,7 @@ Download the archive picsimlab_0.1_w64-dev.zip with the following link : https:/
 Unzip and run picsimlab.exe
 
 For Ubuntu 20.04 : 
-sudo picsimlab_build_all_and_deps.sh
+sudo ./picsimlab_build_all_and_deps.sh
 
 ## Last version update
 build .sh with argument exp is not needed anymore for HPC Curiosty 
